@@ -1,0 +1,37 @@
+{{ "jquery.js" | asset_url | script_tag }}
+{{ "/assets/js/foundation.js" | asset_url | script_tag }}
+<script>
+$(document).foundation();
+</script>
+
+<script>
+
+    $(document).ready(function () {
+
+    	$(".menu, .mask").click(function(e) {
+    		toggleMenu();
+    		return false;
+    	});
+    	
+        var $window = $(window);
+        $('section[data-type="background"]').each(function () {
+            var $bgobj = $(this); // assigning the object
+
+            $(window).scroll(function () {
+
+                var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+
+                // Put together our final background position
+                var coords = '50% ' + yPos + 'px';
+                $bgobj.css({ backgroundPosition: coords });
+                // Move the background
+            });
+        });
+    });
+
+    function toggleMenu() {
+    	$(".off-canvas").toggleClass("open");
+    	$(".main-section").toggleClass("push");
+    	$("header").toggleClass("open");
+    }
+</script>

@@ -1,0 +1,436 @@
+body {
+  background-color: #0d0d0d;
+  overflow-x: hidden;
+  position: relative;
+  font-size: 62.5%;
+  height: auto; }
+
+/*Homepage Sections*/
+.centre {
+  margin-top: 200px;
+  float: left;
+  width: 100%;
+  position: relative; }
+  .centre .caterhamLogo {
+    background-image: url(../images/caterhamLogo.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    margin-left: -150px; }
+
+.masItem {
+  background-color: #ffffff;
+  border: 2px solid #81817f; }
+
+.revealHome h2 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.3em;
+  color: #81817f; }
+
+#home {
+  background: url(../images/MountainFull.jpg) 50% 0 repeat fixed;
+  background-size: 100% auto;
+  height: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  position: relative; }
+
+#welcome {
+  background: url(../images/dials.jpg) 50% 0 repeat fixed;
+  background-size: 100% auto;
+  height: 400px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  position: relative; }
+
+#wipers {
+  background: url(../images/wipers.jpg) 50% 50% repeat fixed;
+  background-size: 100% auto;
+  height: 400px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  position: relative; }
+
+/*Full Width Content areas*/
+.full-bar {
+  height: auto;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  position: relative;
+  border-top: 10px solid #0d0d0d;
+  border-bottom: 10px solid #0d0d0d;
+  padding: 2em 0 1em 0; }
+  .full-bar.grey {
+    background-color: #575857; }
+  .full-bar.light-grey {
+    background-color: #81817f; }
+  .full-bar.red {
+    background-color: #be3140; }
+  .full-bar.no-border-top {
+    border-top: none; }
+
+/*Header and Footer*/
+footer {
+  height: auto;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  position: relative;
+  border-top: 10px solid #0d0d0d;
+  background-color: #575857; }
+
+header {
+  position: fixed;
+  width: 50px;
+  height: 45px;
+  z-index: 900;
+  background-color: rgba(129, 129, 127, 0.5);
+  margin: 5px 0 0 5px;
+  transition: margin 0.5s; }
+  header:hover {
+    box-shadow: 3px 3px 3px #575857; }
+  header a.menu {
+    float: left;
+    width: 50px;
+    padding: 10px;
+    height: 50px;
+    position: relative; }
+  header.open {
+    margin-left: 270px;
+    background-color: #be3140;
+    transition: all 0.5s; }
+    header.open .line {
+      background-color: #ffffff; }
+      header.open .line.top {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transition: all 0.5s;
+        top: 20px;
+        left: 10px; }
+      header.open .line.middle {
+        opacity: 0;
+        transition: all 0.2s; }
+      header.open .line.bottom {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        transition: all 0.5s;
+        top: 20px;
+        left: 10px; }
+  header .line {
+    position: absolute;
+    width: 30px;
+    background-color: #be3140;
+    height: 4px;
+    margin-bottom: 5px;
+    transition: all 0.5s; }
+    header .line.top {
+      top: 10px; }
+    header .line.middle {
+      top: 20px; }
+    header .line.bottom {
+      top: 30px; }
+
+/*Off Canvas and Navigation structure*/
+.off-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100%;
+  margin-left: -300px;
+  border-right: 2px solid #0d0d0d;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: margin 0.5s;
+  z-index: 1000; }
+  .off-canvas.open {
+    margin-left: 0;
+    box-shadow: 5px 0 5px -2px #0d0d0d; }
+  .off-canvas nav {
+    float: left;
+    height: auto;
+    font-family: 'Roboto', sans-serif; }
+    .off-canvas nav h2 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 2.2em;
+      float: left;
+      width: 100%;
+      height: auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 0.5em;
+      margin: 0;
+      color: #ffffff; }
+    .off-canvas nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      float: left;
+      width: 100%;
+      height: auto;
+      background-color: rgba(0, 0, 0, 0.1); }
+      .off-canvas nav ul.slide li {
+        position: relative;
+        float: left;
+        width: 100%;
+        height: auto;
+        padding-bottom: 5px;
+        border-bottom: 0px solid rgba(0, 0, 0, 0);
+        border-top: 0px solid rgba(0, 0, 0, 0); }
+        .off-canvas nav ul.slide li:hover {
+          background-color: #be3140;
+          transition: background-color 0.5s;
+          border-bottom: 0px solid #0d0d0d;
+          border-top: 0px solid #0d0d0d; }
+          .off-canvas nav ul.slide li:hover a {
+            transition: color 0.5s;
+            color: #ffffff; }
+        .off-canvas nav ul.slide li.hover-Off {
+          background-color: #be3140;
+          transition: color 0.5s;
+          border-bottom: 0px solid #0d0d0d;
+          border-top: 0px solid #0d0d0d; }
+          .off-canvas nav ul.slide li.hover-Off a {
+            color: #ffffff; }
+            .off-canvas nav ul.slide li.hover-Off a span {
+              left: 220px;
+              width: 20px;
+              height: 3px;
+              transition: all 0.5s;
+              background-color: #ffffff;
+              top: 15px;
+              border: none; }
+              .off-canvas nav ul.slide li.hover-Off a span:before {
+                opacity: 1;
+                height: 3px;
+                background-color: #ffffff; }
+              .off-canvas nav ul.slide li.hover-Off a span:after {
+                opacity: 1;
+                height: 3px;
+                background-color: #ffffff; }
+        .off-canvas nav ul.slide li a {
+          color: #0d0d0d;
+          font-size: 1.2em;
+          float: left;
+          width: 100%;
+          margin-left: 10px;
+          transition: color 0.5s; }
+          .off-canvas nav ul.slide li a span {
+            position: absolute;
+            top: 10px;
+            left: 5px;
+            height: 10px;
+            width: 10px;
+            background-color: #be3140;
+            transition: all 0.5s;
+            border: 1px solid #0d0d0d; }
+            .off-canvas nav ul.slide li a span:before {
+              position: absolute;
+              height: 0px;
+              width: 10px;
+              left: 14px;
+              top: -3px;
+              background-color: #be3140;
+              content: "";
+              opacity: 0;
+              transform: rotate(45deg);
+              -webkit-transform: rotate(45deg);
+              transition: opacity 0.5s;
+              transition-delay: 0.2s;
+              -webkit-transition-delay: 0.2s; }
+            .off-canvas nav ul.slide li a span:after {
+              position: absolute;
+              height: 0px;
+              width: 10px;
+              left: 14px;
+              top: 3px;
+              opacity: 0;
+              transform: rotate(-45deg);
+              -webkit-transform: rotate(-45deg);
+              transition: opacity 0.5s;
+              transition-delay: 0.2s;
+              -webkit-transition-delay: 0.2s;
+              background-color: #be3140;
+              content: ""; }
+      .off-canvas nav ul.featured li {
+        position: relative;
+        padding: 0;
+        margin: 0;
+        height: 260px;
+        width: 100%;
+        border: 0;
+        overflow: hidden; }
+        .off-canvas nav ul.featured li:hover {
+          border: 0; }
+          .off-canvas nav ul.featured li:hover span {
+            height: 50%;
+            bottom: 0; }
+            .off-canvas nav ul.featured li:hover span em {
+              height: auto; }
+        .off-canvas nav ul.featured li a {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          padding: 0;
+          margin: 0; }
+          .off-canvas nav ul.featured li a span {
+            height: 30px;
+            width: 100%;
+            padding: 0 0.5em 0 0.5em;
+            position: absolute;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+            transition: height 0.5s; }
+            .off-canvas nav ul.featured li a span em {
+              float: left;
+              width: 100%;
+              height: 0;
+              font-weight: normal;
+              font-style: normal;
+              font-size: 0.8em; }
+          .off-canvas nav ul.featured li a img {
+            position: absolute;
+            width: 100%;
+            height: 100%; }
+
+/*Main page area to shift for off canvas nav*/
+.main-section {
+  width: 100%;
+  transition: opacity 0.5s;
+  position: relative;
+  /*Mask used a click target to close navigation*/ }
+  .main-section.push {
+    opacity: 0.4; }
+    .main-section.push .mask {
+      height: 100%;
+      width: 100%; }
+  .main-section .mask {
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 800; }
+
+div.feed {
+  width: 100%; }
+  div.feed div.item {
+    float: left;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 300px;
+    width: 100%;
+    border: 0;
+    overflow: hidden;
+    margin-right: 1em;
+    margin-bottom: 1em; }
+    div.feed div.item:hover {
+      border: 0; }
+      div.feed div.item:hover span {
+        height: 50%;
+        bottom: 0; }
+        div.feed div.item:hover span em {
+          height: auto; }
+    div.feed div.item a {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0; }
+      div.feed div.item a span {
+        height: 22px;
+        width: 100%;
+        padding: 0em 0.5em 0em 0.5em;
+        position: absolute;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #ffffff;
+        transition: height 0.5s;
+        font-size: 2em; }
+        div.feed div.item a span em {
+          float: left;
+          width: 100%;
+          height: 0;
+          font-weight: normal;
+          font-style: normal;
+          font-size: 0.8em; }
+      div.feed div.item a img {
+        position: absolute;
+        width: 100%;
+        height: 100%; }
+
+.body-copy p {
+  color: #0d0d0d;
+  font-size: 1.6em; }
+.body-copy p.intro {
+  color: #0d0d0d;
+  font-size: 2em;
+  font-family: 'Roboto', sans-serif; }
+.body-copy a {
+  color: #ffffff; }
+  .body-copy a:hover {
+    text-decoration: underline; }
+
+.scrollingNegative {
+  position: absolute;
+  width: 150px;
+  height: 500px;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s; }
+  .scrollingNegative.active {
+    opacity: 1; }
+
+@media (max-width: 1200px) {
+  #home {
+    height: 800px;
+    background-size: auto 100%;
+    width: 100%; }
+  #welcome {
+    height: 400px;
+    background-size: auto 100%;
+    width: 100%; }
+  #wipers {
+    height: 400px;
+    background-size: auto 100%;
+    width: 100%; } }
+
+@media (max-width: 320px) {
+  .centre {
+    margin-top: 100px; }
+    .centre .caterhamLogo {
+      background-image: url(../images/caterhamLogo.png);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      left: 50%;
+      margin-left: -75px; }
+  .masItem {
+    background-color: #ffffff;
+    border: 2px solid #81817f; }
+  .revealHome h2 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.3em;
+    color: #81817f; }
+  #home {
+    height: 500px;
+    background-size: auto 100%;
+    width: 100%; }
+  #welcome {
+    height: 200px;
+    background-size: auto 100%;
+    width: 100%; }
+  #wipers {
+    height: 200px;
+    background-size: auto 100%;
+    width: 100%; } }
